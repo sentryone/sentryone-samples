@@ -5,4 +5,4 @@ Samples for SentryOne monitoring products such as SQL Sentry.
 Documentation: https://docs.sentryone.com/help/tableau
 
 # SentryOne_ContentPack.pbix
-Documentation:
+Documentation: https://docs.sentryone.com/help/power-bi-content-pack
