@@ -29,7 +29,7 @@ WHILE @@FETCH_STATUS = 0
 	  'INSERT INTO #ModifiedTables SELECT CONCAT (''' + QUOTENAME(@DatabaseName) +''',
 	   ''.['', [s].[name],
 	   ''].['', [t].[name], '']'') AS DatabaseSchemaTableName,
-		[modify_date] FROM ' + QUOTENAME(@DatabaseName) + '.sys.tables t WITH (NOLOCK) 
+		[t].[modify_date] FROM ' + QUOTENAME(@DatabaseName) + '.sys.tables t WITH (NOLOCK) 
 		JOIN ' + QUOTENAME(@DatabaseName) + '.sys.schemas s WITH (NOLOCK) ON [s].[schema_id] = [t].[schema_id]
 		WHERE [t].[modify_date] > (SELECT DATEADD(HH, -1, GETDATE()))
 		AND [t].[modify_date] != [t].[create_date]' --set the DATEADD to match your evalulation frequency
