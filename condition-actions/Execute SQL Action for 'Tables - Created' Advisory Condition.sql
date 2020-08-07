@@ -19,7 +19,7 @@ CREATE TABLE #CreatedTables (
 DECLARE All_Databases_Cursor CURSOR FOR  
 SELECT [d].[name]   
 FROM sys.databases d WITH (NOLOCK)
-WHERE database_id > 4 --this excludes system tables
+WHERE database_id > 4 --this excludes system databases
 AND state = 0; --only online databases
 OPEN All_Databases_Cursor;  
 FETCH NEXT FROM All_Databases_Cursor INTO @DatabaseName;  
