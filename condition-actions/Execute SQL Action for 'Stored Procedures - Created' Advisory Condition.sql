@@ -28,7 +28,7 @@ WHILE @@FETCH_STATUS = 0
 	  DECLARE @sqlProcedures nvarchar(max) = 
 	  'INSERT INTO #CreatedProcedures SELECT CONCAT (''' + QUOTENAME(@DatabaseName) +''',
 	   ''.['', [s].[name],
-	   ''].['', [p].[name], '']'') AS DatabaseSchemaTableName,
+	   ''].['', [p].[name], '']'') AS DatabaseSchemaProcedureName,
 		[create_date] FROM ' + QUOTENAME(@DatabaseName) + '.sys.procedures p WITH (NOLOCK) 
 		JOIN ' + QUOTENAME(@DatabaseName) + '.sys.schemas s WITH (NOLOCK) ON [s].[schema_id] = [p].[schema_id]
 		WHERE [p].[create_date] > (SELECT DATEADD(HH, -1, GETDATE()))' --set to match your evalulation frequency
