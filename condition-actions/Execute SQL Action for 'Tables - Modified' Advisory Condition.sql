@@ -1,5 +1,5 @@
 /*
-This is an Execute SQL action for the 'Tables - Modifed' advisory condition.
+This is an Execute SQL action for the 'Tables - Modified' advisory condition.
 For more information, see the following:
 	-blog post to follow
 	https://docs.sentryone.com/help/actions
@@ -19,7 +19,7 @@ CREATE TABLE #ModifiedTables (
 DECLARE All_Databases_Cursor CURSOR FOR  
 SELECT [d].[name]   
 FROM sys.databases d WITH (NOLOCK)
-WHERE database_id > 4 --this excludes system tables
+WHERE database_id > 4 --this excludes system databases
 AND state = 0; --only online databases
 OPEN All_Databases_Cursor;  
 FETCH NEXT FROM All_Databases_Cursor INTO @DatabaseName;  
