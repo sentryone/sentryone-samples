@@ -29,7 +29,7 @@ WHILE @@FETCH_STATUS = 0
 	  'INSERT INTO #CreatedTables SELECT CONCAT (''' + QUOTENAME(@DatabaseName) +''',
 	   ''.['', [s].[name],
 	   ''].['', [t].[name], '']'') AS DatabaseSchemaTableName,
-		[create_date] FROM ' + QUOTENAME(@DatabaseName) + '.sys.tables t WITH (NOLOCK) 
+		[t].[create_date] FROM ' + QUOTENAME(@DatabaseName) + '.sys.tables t WITH (NOLOCK) 
 		JOIN ' + QUOTENAME(@DatabaseName) + '.sys.schemas s WITH (NOLOCK) ON [s].[schema_id] = [t].[schema_id]
 		WHERE [t].[create_date] > (SELECT DATEADD(HH, -1, GETDATE()))' --set to match your evalulation frequency
 	  EXEC sp_executesql @sqlTables
