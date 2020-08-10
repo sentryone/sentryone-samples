@@ -52,7 +52,7 @@ FOR XML PATH(N'tr'), ELEMENTS));
 SET @Body = N'<html><head>
 <style> * { font-family: Segoe UI, calibri } </style>
 </head><body>
-<H4>The following tables have been modifiedd:</H4>
+<H4>The following tables have been modified:</H4>
 <p><table border="1" cellpadding="10"> 
 <tr><th>Server  [Database].[Schema].[Table]</th><th>ModifyDate</th></tr>'
   + @HTMLTableRows + N'</table></body></html>';
