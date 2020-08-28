@@ -1,7 +1,7 @@
 /*
 This is an Execute SQL action for the 'Procedures - Modified' advisory condition.
 For more information, see the following:
-	-blog post to follow
+	https://www.sentryone.com/blog/using-sentryone-to-alert-on-sql-server-database-object-changes
 	https://docs.sentryone.com/help/actions
 Melissa Connors
 Copyright 2020 SQL Sentry, LLC
