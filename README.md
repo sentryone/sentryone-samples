@@ -1,3 +1,11 @@
+# Condition Actions
+Blog:  https://www.sentryone.com/blog/using-sentryone-to-alert-on-sql-server-database-object-changes
+
+Documentation:  https://docs.sentryone.com/help/actions#execute-sql
+
+# PowerShell
+Documentation:  https://docs.sentryone.com/help/powershell-module
+
 # Reports
 
 ## Tableau Report Pack for SentryOne Monitoring.twb
