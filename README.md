@@ -13,3 +13,8 @@ Documentation: https://docs.sentryone.com/help/tableau
 
 ## SentryOne_ContentPack.pbix
 Documentation: https://docs.sentryone.com/help/power-bi-content-pack
+
+# Reporting
+## Power BI Baselines
+### BlogBaselineData.xlsx and BlogBaselinesExample.pbix
+Blog:  https://www.sentryone.com/blog/melissaconnors/multiple-baselines-power-bi
